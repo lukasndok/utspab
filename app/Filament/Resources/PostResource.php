@@ -31,6 +31,10 @@ class PostResource extends Resource
                     ->relationship('categories', 'name')
                     ->multiple()
                     ->preload(),
+                Forms\Components\Select::make('tags')
+                    ->relationship('tags', 'name')
+                    ->multiple()
+                    ->preload(),
                 Forms\Components\Toggle::make('published'),
                 Forms\Components\DateTimePicker::make('published_at'),
             ]);
@@ -42,6 +46,8 @@ class PostResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')->searchable(),
                 Tables\Columns\TextColumn::make('slug'),
+                Tables\Columns\TextColumn::make('categories.name')->badge(),
+                Tables\Columns\TextColumn::make('tags.name')->badge(),
                 Tables\Columns\TextColumn::make('created_at'),
                 Tables\Columns\TextColumn::make('updated_at'),
             ])
