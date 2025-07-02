@@ -6,7 +6,7 @@
         @foreach ($post_list as $post)
             <div class="py-8 flex flex-wrap md:flex-nowrap">
         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                      <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{$post->getFirstMediaurl('featured_images')  != '' ? $post->getFirstMediaurl('featured_images') : "https://dummyimage.com/722x402 "}}" alt="blog">
+        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{$post->getFirstMediaurl('featured_images')  != '' ? $post->getFirstMediaurl('featured_images') : "https://dummyimage.com/722x402 "}}" alt="blog">
           <span class="mt-1 text-gray-500 text-sm"> Created At : {{ $post->created_at }}</span>
         </div>
         <div class="md:flex-grow md:ml-10">
@@ -20,7 +20,6 @@
           </a>
         </div>
       </div>
-
       @endforeach
        </div>
   </div>
