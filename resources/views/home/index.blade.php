@@ -1,4 +1,3 @@
-
 @extends('layout')
 @section('content')
 <section class="text-gray-600 body-font">

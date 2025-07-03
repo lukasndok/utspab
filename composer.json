@@ -55,7 +55,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
+            "@php artisan migrate --graceful --ansi",
+            "@php artisan migrate --force --seed",
+            "@php artisan shield:super-admin --user=1 --panel=admin",
+            "@php artisan shield:generate --resource=RoleResource --panel=admin",
+            "@php artisan filament:optimize-clear"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
