@@ -5,8 +5,8 @@
     <div class="lg:w-4/6 mx-auto">
       <div class="rounded-lg h-auto overflow-hidden">
         <img class="object-cover object-center rounded" alt="hero" src="{{
-        $post->getfirstMediaurl('featured_images') != ' ' ?
-        $post->getfirstMediaurl('featured_images') : 'https://dummyimage.com/1200x500' }}">
+        $post->getFirstMediaUrl('featured_images') != ' ' ?
+        $post->getFirstMediaUrl('featured_images') : 'https://dummyimage.com/1200x500' }}">
       </div>
       <div class="flex flex-col sm:flex-row mt-10">
         <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
