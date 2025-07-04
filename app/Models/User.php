@@ -21,6 +21,7 @@ class User extends Authenticatable implements HasMedia, HasAvatar
     use InteractsWithMedia;
     use HasApiTokens;
 
+
     /**
      * The attributes that are mass assignable.
      *
