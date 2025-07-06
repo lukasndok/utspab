@@ -61,6 +61,11 @@ class User extends Authenticatable implements HasMedia, HasAvatar
        ??$thisgetMedia('avatars')?->first()?->getUrl('thumb')
        ??(new UiAvatarsProvider())->get($this);
    }
+
+   public function canAccessPanel(Panel $panel): bool
+    {
+        return true;
+    }
 }
 
     /**

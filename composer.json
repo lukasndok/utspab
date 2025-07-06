@@ -17,6 +17,7 @@
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1",
+        "league/flysystem-aws-s3-v3": "^3.29",
         "rupadana/filament-api-service": "^3.4"
     },
     "require-dev": {
@@ -69,7 +70,10 @@
             "@php artisan migrate --force --seed",
             "@php artisan shield:super-admin --user=1 --panel=admin",
             "@php artisan shield:generate --resource=RoleResource --panel=admin",
-            "@php artisan filament:optimize-clear"
+            "@php artisan optimize:clear",
+            "@php artisan config:cache",
+            "@php artisan route:cache",
+            "@php artisan view:cache"
         ]
     },
     "extra": {
